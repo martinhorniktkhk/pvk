@@ -5,7 +5,7 @@
       <paths name="Server Martin">
         <serverdata>
           <mappings>
-            <mapping deploy="/public_html/pvk" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/public_html/pvk" local="$PROJECT_DIR$" web="/pvk" />
           </mappings>
         </serverdata>
       </paths>
