@@ -12,7 +12,7 @@
       <paths name="ikt">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/public_html/pvk" local="$PROJECT_DIR$" web="/pvk/" />
           </mappings>
         </serverdata>
       </paths>
