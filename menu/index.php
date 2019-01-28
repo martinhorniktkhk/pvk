@@ -65,6 +65,7 @@ function soodus($hind, $soodusProtsent){
                     echo '</div>';
                     ?>
                 </div>
+<!--    supid -->
                 <div class="card m-3">
                     <div class="card-header alert-dark">
                         <a href="#supid" data-parent="#accordion" data-toggle="collapse" >
@@ -72,20 +73,52 @@ function soodus($hind, $soodusProtsent){
                         </a>
                     </div>
                     <?php
-                    echo '
-                            <div id="supid" class="collapse">
-                                <ul class="list-group">
-                                    <li class="list-group-item">
-                                        <p class="mb-0">Rassolnik <br>
-                                            <span class="small text-secondary">supp, hapukoor, leib</span><br>
-                                            <span class="badge badge-info">1.10&euro;</span>
-                                            <span class="badge badge-success">0.94&euro;</span>
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>';
+                    $supid = array(
+                        array(
+                            'nimetus' => 'Rassolnik',
+                            'kirjeldus' => 'supp, hapukoor, leib',
+                            'hind' => 1.10),
+                        array(
+                            'nimetus' => 'Borss',
+                            'kirjeldus' => 'supp, hapukoor, leib',
+                            'hind' => 1.30)
+                    );
+                    echo '<div id="supid" class="collapse">';
+                    foreach ($supid as $supp=>$info){
+                        echo '<ul class="list-group">';
+                        echo '<li class="list-group-item">';
+                        echo '<p class="mb-0">'.$info['nimetus'].' <br>';
+                        echo '<span class="small text-secondary">'.$info['kirjeldus'].'</span><br>';
+                        echo '<span class="badge badge-info">'.$info['hind'].'&euro;</span>';
+                        echo '<span class="badge badge-success">'.soodus($info['hind'], 15).'&euro;</span>';
+                        echo '</p>
+                                    </li>';
+                        echo '</ul>';
+                    }
+                    echo '</div>';
                     ?>
                 </div>
+                <!--<div class="card m-3">
+                            <div class="card-header alert-dark">
+                                <a href="#supid" data-parent="#accordion" data-toggle="collapse" >
+                                    <h2 class="text-dark">SUPID <i class="fas fa-utensil-spoon"></i></h2>
+                                </a>
+                            </div>
+							<?php
+                /*							echo '
+                                            <div id="supid" class="collapse">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <p class="mb-0">Rassolnik <br>
+                                                            <span class="small text-secondary">supp, hapukoor, leib</span><br>
+                                                            <span class="badge badge-info">1.10&euro;</span>
+                                                            <span class="badge badge-success">0.94&euro;</span>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>';
+                                            */?>
+                        </div>-->
                 <div class="card m-3">
                     <div class="card-header alert-dark">
                         <a href="#magus" data-parent="#accordion" data-toggle="collapse" >
