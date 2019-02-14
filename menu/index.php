@@ -13,6 +13,10 @@ $contentTmpl = new Template('content');
 
 $courseCardTmpl = new Template('course_card');
 
+$courseCardHeaderTmpl = new Template('course_card_header');
+
+$courseCardTmpl->set('course_card_header',$courseCardHeaderTmpl->parse());
+
 $contentTmpl->add('course_cards',$courseCardTmpl->parse());
 $contentTmpl->add('course_cards',$courseCardTmpl->parse());
 $contentTmpl->add('course_cards',$courseCardTmpl->parse());
